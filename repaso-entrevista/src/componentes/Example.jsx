@@ -1,8 +1,24 @@
 import "./Example.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Example() {
   const [count, setCount] = useState(0);
+  const [data, setData] = useState([]);
+
+  async function promesa() {
+    try {
+      const response = await fetch("/data/data.json");
+      const data = await response.json();
+      setData(data);
+      console.log(data);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  useEffect(() => {
+    promesa();
+  }, []);
 
   function handleClickIncrement() {
     setCount(count + 1);
@@ -11,6 +27,15 @@ export default function Example() {
   function handleClickDecrement() {
     setCount(count - 1);
   }
+  const mapeo = data.map((item) => {
+    return (
+      <div key={item.id}>
+        <p>{item.name}</p>
+        <p>{item.lastName}</p>
+        <p>{item.age}</p>
+      </div>
+    );
+  });
 
   return (
     <div className="container">
@@ -28,9 +53,10 @@ export default function Example() {
           className="btn"
           onClick={handleClickDecrement}
         >
-          Decreamentar
+          Decrementar
         </button>
       </div>
+      {mapeo}
     </div>
   );
 }

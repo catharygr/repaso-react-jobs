@@ -4,14 +4,18 @@ import { useState, useEffect } from "react";
 export default function Example() {
   const [count, setCount] = useState(0);
   const [data, setData] = useState([]);
+  const [cargando, setCargando] = useState(true);
+  const [error, setError] = useState(null);
 
   async function promesa() {
     try {
       const response = await fetch("/data/data.json");
+      await new Promise((resolve) => setTimeout(resolve, 2000));
       const data = await response.json();
       setData(data);
+      setCargando(false);
     } catch (error) {
-      console.error("Error:", error);
+      setError(error);
     }
   }
 
@@ -42,6 +46,8 @@ export default function Example() {
   return (
     <div className="container">
       <h1>Examples</h1>
+      {cargando && <p>Cargando...</p>}
+      {error && <p>Error</p>}
 
       <div className="btn-p">
         <p>Click {count} time</p>

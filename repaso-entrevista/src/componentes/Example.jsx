@@ -29,7 +29,10 @@ export default function Example() {
   }
   const mapeo = data.map((item) => {
     return (
-      <div key={item.id}>
+      <div
+        className="fetchcontainer"
+        key={item.id}
+      >
         <p>{item.name}</p>
         <p>{item.lastName}</p>
         <p>{item.age}</p>

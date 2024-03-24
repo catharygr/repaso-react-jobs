@@ -7,19 +7,18 @@ export default function Example() {
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(null);
 
-  async function promesa() {
-    try {
-      const response = await fetch("/data/data.json");
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      const data = await response.json();
-      setData(data);
-      setCargando(false);
-    } catch (error) {
-      setError(error);
-    }
-  }
-
   useEffect(() => {
+    async function promesa() {
+      try {
+        const response = await fetch("/data/data.json");
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+        const data = await response.json();
+        setData(data);
+        setCargando(false);
+      } catch (error) {
+        setError(error);
+      }
+    }
     promesa();
   }, []);
 

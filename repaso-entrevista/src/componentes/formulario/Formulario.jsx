@@ -1,10 +1,9 @@
 import { useState, useRef, useContext } from "react";
 import "./Formulario.css";
-import { ThemeContext } from "../ThemeContext";
+import { ThemeContext } from "../../utildades/ThemeContext";
 
 export default function Formulario() {
   const { theme, setTheme } = useContext(ThemeContext);
-  console.log(theme);
 
   const [form, setForm] = useState({
     nombre: "",

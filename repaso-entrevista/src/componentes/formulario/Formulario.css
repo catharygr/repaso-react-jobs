@@ -43,3 +43,23 @@
   color: #fff;
   cursor: pointer;
 }
+
+.btn-theme {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modo-claro {
+  background-color: pink;
+  color: #000;
+}
+
+.modo-oscuro {
+  background-color: #000;
+  color: #fff;
+}

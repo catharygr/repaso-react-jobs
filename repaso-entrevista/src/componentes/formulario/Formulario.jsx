@@ -1,7 +1,11 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
 import "./Formulario.css";
+import { ThemeContext } from "../../ThemeContext";
 
 export default function Formulario() {
+  const { theme, setTheme } = useContext(ThemeContext);
+  console.log(theme);
+
   const [form, setForm] = useState({
     nombre: "",
     email: "",
@@ -20,47 +24,60 @@ export default function Formulario() {
   };
 
   return (
-    <div className="container">
-      <form onSubmit={manejarSubmit}>
-        <label htmlFor="nombre">Nombre</label>
-        <input
-          className="input"
-          type="text"
-          value={form.nombre}
-          onChange={(e) => setForm({ ...form, nombre: e.target.value })}
-        />
-        <label htmlFor="email">Email</label>
-        <input
-          className="input"
-          type="email"
-          ref={inputRef}
-          value={form.email}
-          onChange={(e) => setForm({ ...form, email: e.target.value })}
-        />
-        <button
-          className="btn"
-          type="submit"
-        >
-          Enviar
-        </button>
-      </form>
-      {modal && (
-        <div className="modal">
-          <p>Formulario enviado</p>
+    <>
+      <div className="container">
+        <form onSubmit={manejarSubmit}>
+          <label htmlFor="nombre">Nombre</label>
+          <input
+            className="input"
+            type="text"
+            value={form.nombre}
+            onChange={(e) => setForm({ ...form, nombre: e.target.value })}
+          />
+          <label htmlFor="email">Email</label>
+          <input
+            className="input"
+            type="email"
+            ref={inputRef}
+            value={form.email}
+            onChange={(e) => setForm({ ...form, email: e.target.value })}
+          />
           <button
-            className="btn-modal"
-            onClick={() => setModal(false)}
+            className="btn"
+            type="submit"
           >
-            Cerrar
+            Enviar
           </button>
-        </div>
-      )}
-      <button
-        className="btn-focus"
-        onClick={handleClickFocus}
-      >
-        Focus
-      </button>
-    </div>
+        </form>
+        {modal && (
+          <div className="modal">
+            <p>Formulario enviado</p>
+            <button
+              className="btn-modal"
+              onClick={() => setModal(false)}
+            >
+              Cerrar
+            </button>
+          </div>
+        )}
+        <button
+          className="btn-focus"
+          onClick={handleClickFocus}
+        >
+          Focus
+        </button>
+      </div>
+      <div>
+        <p className={theme}>{theme}</p>
+        <button
+          className="btn-theme"
+          onClick={() =>
+            setTheme(theme === "modo-claro" ? "modo-oscuro" : "modo-claro")
+          }
+        >
+          Cambiar tema
+        </button>
+      </div>
+    </>
   );
 }

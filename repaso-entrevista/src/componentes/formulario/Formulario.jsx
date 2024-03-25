@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./Formulario.css";
 
 export default function Formulario() {
@@ -7,11 +7,16 @@ export default function Formulario() {
     email: "",
   });
   const [modal, setModal] = useState(false);
+  const inputRef = useRef(null);
 
   const manejarSubmit = (evento) => {
     evento.preventDefault();
     setForm({ nombre: "", email: "" });
     setModal(true);
+  };
+
+  const handleClickFocus = () => {
+    inputRef.current.focus();
   };
 
   return (
@@ -28,6 +33,7 @@ export default function Formulario() {
         <input
           className="input"
           type="email"
+          ref={inputRef}
           value={form.email}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
         />
@@ -49,6 +55,12 @@ export default function Formulario() {
           </button>
         </div>
       )}
+      <button
+        className="btn-focus"
+        onClick={handleClickFocus}
+      >
+        Focus
+      </button>
     </div>
   );
 }

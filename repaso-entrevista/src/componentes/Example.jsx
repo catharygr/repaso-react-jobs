@@ -1,8 +1,10 @@
 import "./Example.css";
 import { useState, useEffect } from "react";
+import useCustomHook from "../utildades/useCustomHook";
 
 export default function Example() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
+  const [value, incrementValue, decrementValue] = useCustomHook();
   const [data, setData] = useState([]);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(null);
@@ -22,13 +24,13 @@ export default function Example() {
     promesa();
   }, []);
 
-  function handleClickIncrement() {
-    setCount(count + 1);
-  }
+  // function handleClickIncrement() {
+  //   setCount(count + 1);
+  // }
 
-  function handleClickDecrement() {
-    setCount(count - 1);
-  }
+  // function handleClickDecrement() {
+  //   setCount(count - 1);
+  // }
   const mapeo = data.map((item) => {
     return (
       <div
@@ -49,16 +51,16 @@ export default function Example() {
       {error && <p>Error</p>}
 
       <div className="btn-p">
-        <p>Click {count} time</p>
+        <p>Click {value} time</p>
         <button
           className="btn"
-          onClick={handleClickIncrement}
+          onClick={incrementValue}
         >
           Incremetar
         </button>
         <button
           className="btn"
-          onClick={handleClickDecrement}
+          onClick={decrementValue}
         >
           Decrementar
         </button>

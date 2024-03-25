@@ -1,6 +1,6 @@
 import { useState, useRef, useContext } from "react";
 import "./Formulario.css";
-import { ThemeContext } from "../../ThemeContext";
+import { ThemeContext } from "../ThemeContext";
 
 export default function Formulario() {
   const { theme, setTheme } = useContext(ThemeContext);

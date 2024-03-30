@@ -22,11 +22,26 @@ export default function Formulario() {
     inputRef.current.focus();
   };
 
+  let miBoton = useRef(null);
+  let miConstante = useRef("mi constante");
+  // let miConstante = "mi constante";
+  console.log(miConstante);
+
+  function handleMiConstante() {
+    miConstante.current = "Mi pendejo";
+    console.log(miConstante);
+  }
+
   return (
     <>
       <div className="container">
         <form onSubmit={manejarSubmit}>
-          <label htmlFor="nombre">Nombre</label>
+          <label
+            ref={miBoton}
+            htmlFor="nombre"
+          >
+            Nombre
+          </label>
           <input
             className="input"
             type="text"
@@ -76,6 +91,10 @@ export default function Formulario() {
         >
           Cambiar tema
         </button>
+      </div>
+      <div>
+        <p>{miConstante.current}</p>
+        <button onClick={handleMiConstante}>Cambiar mi constante</button>
       </div>
     </>
   );

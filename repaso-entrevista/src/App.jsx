@@ -10,7 +10,7 @@ function App() {
   const contadorRef = useRef(null);
 
   useEffect(() => {
-    document.title = `Count: ${count}`;
+    document.title = `Contador: ${count}`;
   });
 
   const incrementCount = () => {

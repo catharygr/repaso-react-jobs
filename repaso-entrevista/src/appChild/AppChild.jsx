@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import "./AppChild.css";
 export default function AppChild({ count, incrementCount, clearCount }) {
   return (
     <div className="container">

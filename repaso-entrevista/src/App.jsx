@@ -2,11 +2,15 @@ import "./App.css";
 import Example from "./componentes/Example";
 import Formulario from "./componentes/formulario/Formulario";
 import List from "./componentes/lista/Lista";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AppChild from "./componentes/AppChild";
 
 function App() {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `Count: ${count}`;
+  });
 
   const incrementCount = () => {
     setCount(count + 1);

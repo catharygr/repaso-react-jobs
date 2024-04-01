@@ -4,6 +4,7 @@ import { ThemeContext } from "../../utildades/ThemeContext";
 
 export default function Formulario() {
   const { theme, setTheme } = useContext(ThemeContext);
+  const [, forzarRenderizado] = useState();
 
   const [form, setForm] = useState({
     nombre: "",
@@ -27,7 +28,13 @@ export default function Formulario() {
   // let miConstante = "mi constante";
 
   function handleMiConstante() {
-    miConstante.current = "Mi pendejo";
+    if (miConstante.current === "Mi pendejo") {
+      miConstante.current = "Mi constante";
+    } else {
+      miConstante.current = "Mi pendejo";
+    }
+    // Forzar un renderizado
+    forzarRenderizado({});
   }
 
   return (

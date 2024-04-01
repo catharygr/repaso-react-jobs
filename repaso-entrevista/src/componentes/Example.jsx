@@ -4,7 +4,7 @@ import useCustomHook from "../utildades/useCustomHook";
 
 export default function Example() {
   const { value, incrementValue, decrementValue } = useCustomHook();
-  console.log(value);
+
   const [data, setData] = useState([]);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(null);

@@ -3,7 +3,7 @@ import Example from "./componentes/Example";
 import Formulario from "./componentes/formulario/Formulario";
 import List from "./componentes/lista/Lista";
 import { useState, useEffect, useRef } from "react";
-import AppChild from "./componentes/AppChild";
+import AppChild from "./appChild/AppChild";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,8 +14,13 @@ function App() {
   });
 
   const incrementCount = () => {
+    // Si ya existe un intervalo, detenerlo
+    if (contadorRef.current) {
+      clearInterval(contadorRef.current);
+    }
+
     contadorRef.current = setInterval(() => {
-      setCount(count + 1);
+      setCount((currentCount) => currentCount + 1);
     }, 1000);
   };
 
@@ -29,7 +34,6 @@ function App() {
       <Formulario />
       <List />
       <div>
-        <p>Count: {count}</p>
         <AppChild
           count={count}
           incrementCount={incrementCount}

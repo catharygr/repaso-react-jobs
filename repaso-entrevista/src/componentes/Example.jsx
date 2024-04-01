@@ -4,6 +4,7 @@ import useCustomHook from "../utildades/useCustomHook";
 
 export default function Example() {
   const { value, incrementValue, decrementValue } = useCustomHook();
+  console.log(value);
   const [data, setData] = useState([]);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(null);
@@ -23,6 +24,9 @@ export default function Example() {
     promesa();
   }, []);
   const mapeo = data.map((item) => {
+    if (item.age < 25 || item.age > 27) {
+      return null;
+    }
     return (
       <div
         className="fetchcontainer"
@@ -42,7 +46,10 @@ export default function Example() {
       {error && <p>Error</p>}
 
       <div className="btn-p">
-        <p>Click {value} time</p>
+        <p>
+          Click {""}
+          {value} {""}time
+        </p>
         <button
           className="btn"
           onClick={incrementValue}

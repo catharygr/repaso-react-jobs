@@ -25,11 +25,9 @@ export default function Formulario() {
   let miBoton = useRef(null);
   let miConstante = useRef("mi constante");
   // let miConstante = "mi constante";
-  console.log(miConstante);
 
   function handleMiConstante() {
     miConstante.current = "Mi pendejo";
-    console.log(miConstante);
   }
 
   return (

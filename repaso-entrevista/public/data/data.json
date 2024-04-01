@@ -10,5 +10,17 @@
     "name": "Jane",
     "lastName": "Doe",
     "age": 22
+  },
+  {
+    "id": 3,
+    "name": "John",
+    "lastName": "Smith",
+    "age": 30
+  },
+  {
+    "id": 4,
+    "name": "Jane",
+    "lastName": "Smith",
+    "age": 27
   }
 ]

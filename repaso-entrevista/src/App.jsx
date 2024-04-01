@@ -14,8 +14,13 @@ function App() {
   });
 
   const incrementCount = () => {
-    c;
-    setCount(count + 1);
+    contadorRef.current = setInterval(() => {
+      setCount(count + 1);
+    }, 1000);
+  };
+
+  const clearCount = () => {
+    clearInterval(contadorRef.current);
   };
 
   return (
@@ -28,6 +33,7 @@ function App() {
         <AppChild
           count={count}
           incrementCount={incrementCount}
+          clearCount={clearCount}
         />
       </div>
     </div>

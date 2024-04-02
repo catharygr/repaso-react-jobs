@@ -19,13 +19,10 @@ export default function ComponentControlados() {
   return (
     <div>
       <ComponenteUno
-        values={sharedState}
+        sharedState={sharedState}
         handleChange={handleChange}
       />
-      <ComponenteDos
-        values={sharedState}
-        handleChange={handleChange}
-      />
+      <ComponenteDos sharedState={sharedState} />
     </div>
   );
 }

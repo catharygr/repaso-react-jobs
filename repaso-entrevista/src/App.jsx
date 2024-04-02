@@ -10,13 +10,13 @@ function App() {
   const contadorRef = useRef(null);
 
   useEffect(() => {
-    document.title = `Contador: ${count}`;
+    document.title = `Count: ${count}`;
   });
 
   const incrementCount = () => {
-    // Si ya existe un intervalo, detenerlo
+    // Si ya existe un intervalo, no hacer nada
     if (contadorRef.current) {
-      clearInterval(contadorRef.current);
+      return;
     }
 
     contadorRef.current = setInterval(() => {
@@ -26,6 +26,7 @@ function App() {
 
   const clearCount = () => {
     clearInterval(contadorRef.current);
+    contadorRef.current = null;
   };
 
   return (

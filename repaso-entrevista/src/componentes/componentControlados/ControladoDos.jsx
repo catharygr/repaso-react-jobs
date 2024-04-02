@@ -13,7 +13,7 @@ export default function ControladoDos({
       <label className="label">
         Nombre
         <input
-          className="input"
+          className="input-rojo"
           type="text"
           ref={nombreRef}
         />
@@ -21,7 +21,7 @@ export default function ControladoDos({
       <label className="label">
         Email
         <input
-          className="input"
+          className="input-rojo"
           type="email"
           ref={emailRef}
         />
@@ -29,7 +29,7 @@ export default function ControladoDos({
       <label className="label">
         Password
         <input
-          className="input"
+          className="input-rojo"
           type="password"
           ref={passwordRef}
         />

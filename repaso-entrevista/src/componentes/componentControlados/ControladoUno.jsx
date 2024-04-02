@@ -9,7 +9,7 @@ export default function ControladoUno({ sharedState, handleChange }) {
       >
         Nombre
         <input
-          className="input"
+          className="input-azul"
           type="text"
           name="nombre"
           value={sharedState.nombre}
@@ -19,7 +19,7 @@ export default function ControladoUno({ sharedState, handleChange }) {
       <label className="label">
         Email
         <input
-          className="input"
+          className="input-azul"
           type="email"
           name="email"
           value={sharedState.email}
@@ -29,7 +29,7 @@ export default function ControladoUno({ sharedState, handleChange }) {
       <label className="label">
         Password
         <input
-          className="input"
+          className="input-azul"
           type="password"
           name="password"
           value={sharedState.password}

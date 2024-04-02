@@ -11,11 +11,12 @@
   margin-bottom: 10px;
 }
 
-.input {
+.input-azul {
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #007bff;
   border-radius: 5px;
+  display: flex;
 }
 
 .input-rojo {

@@ -48,14 +48,14 @@ export default function Formulario() {
             Nombre
           </label>
           <input
-            className="input"
+            className="input-formulario"
             type="text"
             value={form.nombre}
             onChange={(e) => setForm({ ...form, nombre: e.target.value })}
           />
           <label htmlFor="email">Email</label>
           <input
-            className="input"
+            className="input-formulario"
             type="email"
             ref={inputRef}
             value={form.email}

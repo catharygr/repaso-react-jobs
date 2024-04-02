@@ -16,16 +16,16 @@ export default function ComponentControlados() {
     });
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setValues({
-  //     nombre: "",
-  //     email: "",
-  //     password: "",
-  //   });
-    // console.log(values);
-  // };
   return (
-   
+    <div>
+      <ComponenteUno
+        values={sharedState}
+        handleChange={handleChange}
+      />
+      <ComponenteDos
+        values={sharedState}
+        handleChange={handleChange}
+      />
+    </div>
   );
 }

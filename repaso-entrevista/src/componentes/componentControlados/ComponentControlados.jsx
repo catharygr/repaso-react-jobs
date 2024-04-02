@@ -1,4 +1,6 @@
 import "./ComponentControlados.css";
+import ComponenteUno from "./ComponenteUno";
+import ComponenteDos from "./ComponenteDos";
 import { useState } from "react";
 export default function ComponentControlados() {
   const [values, setValues] = useState({

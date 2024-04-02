@@ -1,3 +1,4 @@
+import "./ComponentControlados.css";
 export default function ComponentControlados() {
   return (
     <form>

@@ -37,7 +37,9 @@ export default function ComponentControlados() {
         handleChange={handleChange}
       />
       <ComponenteDos
-        sharedState={sharedState}
+        nombreRef={nombreRef}
+        emailRef={emailRef}
+        passwordRef={passwordRef}
         handleSubmit={handleSubmit}
       />
     </div>

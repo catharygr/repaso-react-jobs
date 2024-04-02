@@ -1,4 +1,5 @@
-export default function ControladoDos() {
+export default function ControladoDos({ sharedState }) {
+  const { nombre, email, password } = sharedState;
   return (
     <form>
       <label>

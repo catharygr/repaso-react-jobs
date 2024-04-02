@@ -1,19 +1,13 @@
 /* eslint-disable react/prop-types */
 import "./AppChild.css";
-export default function AppChild({ count, incrementCount, clearCount }) {
+export default function AppChild({ count, toggleCount, isRunning }) {
   return (
     <div className="container">
       <button
         className="btn"
-        onClick={incrementCount}
+        onClick={toggleCount}
       >
-        Click me to increment count ( {count})
-      </button>
-      <button
-        className="btn"
-        onClick={clearCount}
-      >
-        Click me to clear count ( {count})
+        {isRunning ? "Stop" : "Start"} count ( {count})
       </button>
     </div>
   );

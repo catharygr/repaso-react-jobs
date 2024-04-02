@@ -7,26 +7,24 @@ import AppChild from "./appChild/AppChild";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [isRunning, setIsRunning] = useState(false);
   const contadorRef = useRef(null);
 
   useEffect(() => {
     document.title = `Count: ${count}`;
   });
 
-  const incrementCount = () => {
-    // Si ya existe un intervalo, no hacer nada
-    if (contadorRef.current) {
-      return;
+  const toggleCount = () => {
+    if (isRunning) {
+      clearInterval(contadorRef.current);
+      contadorRef.current = null;
+      setIsRunning(false);
+    } else {
+      contadorRef.current = setInterval(() => {
+        setCount((currentCount) => currentCount + 1);
+      }, 1000);
+      setIsRunning(true);
     }
-
-    contadorRef.current = setInterval(() => {
-      setCount((currentCount) => currentCount + 1);
-    }, 1000);
-  };
-
-  const clearCount = () => {
-    clearInterval(contadorRef.current);
-    contadorRef.current = null;
   };
 
   return (
@@ -37,8 +35,8 @@ function App() {
       <div>
         <AppChild
           count={count}
-          incrementCount={incrementCount}
-          clearCount={clearCount}
+          toggleCount={toggleCount}
+          isRunning={isRunning}
         />
       </div>
     </div>

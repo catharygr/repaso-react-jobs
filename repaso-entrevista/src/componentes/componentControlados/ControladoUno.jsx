@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 export default function ControladoUno({ sharedState, handleChange }) {
-  const { nombre, email, password } = sharedState;
   return (
     <form className=" form">
       <label
@@ -13,7 +12,7 @@ export default function ControladoUno({ sharedState, handleChange }) {
           className="input"
           type="text"
           name="nombre"
-          value={sharedState}
+          value={sharedState.nombre}
           onChange={handleChange}
         />
       </label>
@@ -23,7 +22,7 @@ export default function ControladoUno({ sharedState, handleChange }) {
           className="input"
           type="email"
           name="email"
-          value={sharedState}
+          value={sharedState.email}
           onChange={handleChange}
         />
       </label>
@@ -33,7 +32,7 @@ export default function ControladoUno({ sharedState, handleChange }) {
           className="input"
           type="password"
           name="password"
-          value={sharedState}
+          value={sharedState.password}
           onChange={handleChange}
         />
       </label>

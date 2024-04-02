@@ -1,6 +1,6 @@
 import "./ComponentControlados.css";
-import ComponenteUno from "./ComponenteUno";
-import ComponenteDos from "./ComponenteDos";
+import ControladoUno from "./ControladoUno";
+import ControladoDos from "./ControladoDos";
 import { useState, useRef } from "react";
 export default function ComponentControlados() {
   const [sharedState, setShareState] = useState({
@@ -32,11 +32,11 @@ export default function ComponentControlados() {
 
   return (
     <div>
-      <ComponenteUno
+      <ControladoUno
         sharedState={sharedState}
         handleChange={handleChange}
       />
-      <ComponenteDos
+      <ControladoDos
         nombreRef={nombreRef}
         emailRef={emailRef}
         passwordRef={passwordRef}

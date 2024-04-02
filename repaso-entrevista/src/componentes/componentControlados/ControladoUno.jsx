@@ -1,19 +1,45 @@
 export default function ControladoUno() {
   return (
-    <form>
-      <label>
+    <form className=" form">
+      <label
+        className="label"
+        htmlFor="nombre"
+      >
         Nombre
-        <input type="text" />
+        <input
+          className="input"
+          type="text"
+          name="nombre"
+          value={values.nombre}
+          onChange={handleChange}
+        />
       </label>
-      <label>
+      <label className="label">
         Email
-        <input type="email" />
+        <input
+          className="input"
+          type="email"
+          name="email"
+          value={values.email}
+          onChange={handleChange}
+        />
       </label>
-      <label>
+      <label className="label">
         Password
-        <input type="password" />
+        <input
+          className="input"
+          type="password"
+          name="password"
+          value={values.password}
+          onChange={handleChange}
+        />
       </label>
-      <button type="submit">Enviar</button>
+      <button
+        className="btn"
+        type="submit"
+      >
+        Enviar
+      </button>
     </form>
   );
 }

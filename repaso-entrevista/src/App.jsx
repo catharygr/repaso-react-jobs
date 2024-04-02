@@ -9,11 +9,15 @@ function App() {
   const [count, setCount] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const contadorRef = useRef(null);
+  const [IsFormularioVisible, setIsFormularioVisible] = useState(true);
 
   useEffect(() => {
     document.title = `Count: ${count}`;
   });
 
+  function toggleFormulario() {
+    setIsFormularioVisible(!IsFormularioVisible);
+  }
   const toggleCount = () => {
     if (isRunning) {
       clearInterval(contadorRef.current);
@@ -29,16 +33,24 @@ function App() {
 
   return (
     <div className="container">
-      <Example />
-      <Formulario />
-      <List />
-      <div>
-        <AppChild
-          count={count}
-          toggleCount={toggleCount}
-          isRunning={isRunning}
-        />
-      </div>
+      <button onClick={toggleFormulario}>
+        {IsFormularioVisible ? "Ocultar formulario" : "Mostrar formulario"}
+      </button>
+      {IsFormularioVisible ? (
+        <Formulario />
+      ) : (
+        <>
+          <Example />
+          <List />
+          <div>
+            <AppChild
+              count={count}
+              toggleCount={toggleCount}
+              isRunning={isRunning}
+            />
+          </div>
+        </>
+      )}
     </div>
   );
 }

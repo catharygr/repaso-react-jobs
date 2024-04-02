@@ -15,6 +15,11 @@ export default function ComponentControlados() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setValues({
+      nombre: "",
+      email: "",
+      password: "",
+    });
     // console.log(values);
   };
   return (

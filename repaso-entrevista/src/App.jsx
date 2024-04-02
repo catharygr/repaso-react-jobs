@@ -1,9 +1,10 @@
 import "./App.css";
-import Example from "./componentes/Example";
+import Example from "./componentes/exemple/Example";
 import Formulario from "./componentes/formulario/Formulario";
 import List from "./componentes/lista/Lista";
 import { useState, useEffect, useRef } from "react";
-import AppChild from "./appChild/AppChild";
+import AppChild from "./componentes/appChild/AppChild";
+import ComponentControlados from "./componentes/componentControlados/ComponentControlados";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -49,6 +50,7 @@ function App() {
               isRunning={isRunning}
             />
           </div>
+          <ComponentControlados />
         </>
       )}
     </div>

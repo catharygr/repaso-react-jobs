@@ -1,6 +1,6 @@
 import "./Example.css";
 import { useState, useEffect } from "react";
-import useCustomHook from "../utildades/useCustomHook";
+import useCustomHook from "../../utildades/useCustomHook";
 
 export default function Example() {
   const { value, incrementValue, decrementValue } = useCustomHook();

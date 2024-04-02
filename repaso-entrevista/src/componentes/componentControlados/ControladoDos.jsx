@@ -1,18 +1,32 @@
-export default function ControladoDos({ sharedState }) {
-  const { nombre, email, password } = sharedState;
+/* eslint-disable react/prop-types */
+export default function ControladoDos({
+  nombreRef,
+  emailRef,
+  passwordRef,
+  handleSubmit,
+}) {
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <label>
         Nombre
-        <input type="text" />
+        <input
+          type="text"
+          ref={nombreRef}
+        />
       </label>
       <label>
         Email
-        <input type="email" />
+        <input
+          type="email"
+          ref={emailRef}
+        />
       </label>
       <label>
         Password
-        <input type="password" />
+        <input
+          type="password"
+          ref={passwordRef}
+        />
       </label>
       <button type="submit">Enviar</button>
     </form>

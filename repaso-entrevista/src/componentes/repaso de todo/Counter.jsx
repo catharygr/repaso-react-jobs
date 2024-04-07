@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import "./Counter.css";
 
+// Simulamos un servicio que nos da un numero aleatorio cada segundos
+const randomService = {};
+
 export default function Counter() {
   const [counter, setCounter] = useState(0);
 

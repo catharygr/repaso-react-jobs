@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Counter.css";
 
 export default function Counter() {
   const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    document.title = `Contador: ${counter}`;
+  }, [counter]);
 
   return (
     <>

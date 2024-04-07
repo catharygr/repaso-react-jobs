@@ -4,10 +4,15 @@ import Clock from "./Clock";
 
 export default function Counter() {
   const [counter, setCounter] = useState(0);
+  const [showClock, setShowClock] = useState(false);
 
   useEffect(() => {
     document.title = `Contador: ${counter}`;
   }, [counter]);
+
+  const toggleClock = () => {
+    setShowClock(!showClock);
+  };
 
   return (
     <>
@@ -18,7 +23,10 @@ export default function Counter() {
       >
         Incrementar
       </button>
-      <Clock />
+      <button onClick={toggleClock}>
+        {showClock ? "Ocultar reloj" : "Mostrar reloj"}
+      </button>
+      {showClock && <Clock />}
     </>
   );
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Counter.css";
+import Clock from "./Clock";
 
 export default function Counter() {
   const [counter, setCounter] = useState(0);
@@ -17,6 +18,7 @@ export default function Counter() {
       >
         Incrementar
       </button>
+      <Clock />
     </>
   );
 }

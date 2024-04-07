@@ -2,7 +2,7 @@ import "./App.css";
 import Example from "./componentes/exemple/Example";
 import Formulario from "./componentes/formulario/Formulario";
 import List from "./componentes/lista/Lista";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import AppChild from "./componentes/appChild/AppChild";
 import ComponentControlados from "./componentes/componentControlados/ComponentControlados";
 import Counter from "./componentes/repaso de todo/Counter";
@@ -12,10 +12,6 @@ function App() {
   const [isRunning, setIsRunning] = useState(false);
   const contadorRef = useRef(null);
   const [IsFormularioVisible, setIsFormularioVisible] = useState(true);
-
-  useEffect(() => {
-    document.title = `Count: ${count}`;
-  });
 
   function toggleFormulario() {
     setIsFormularioVisible(!IsFormularioVisible);

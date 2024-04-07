@@ -23,10 +23,6 @@ export default function Counter() {
       >
         Incrementar
       </button>
-      <button onClick={toggleClock}>
-        {showClock ? "Ocultar reloj" : "Mostrar reloj"}
-      </button>
-      {showClock && <Clock />}
     </>
   );
 }

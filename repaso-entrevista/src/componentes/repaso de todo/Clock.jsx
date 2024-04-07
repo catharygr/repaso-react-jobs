@@ -13,6 +13,10 @@ export default function Clock() {
     <div>
       <h2>Reloj</h2>
       <p>La hora es: {time}</p>
+      <button onClick={toggleClock}>
+        {showClock ? "Ocultar reloj" : "Mostrar reloj"}
+      </button>
+      {showClock && <Clock />}
     </div>
   );
 }

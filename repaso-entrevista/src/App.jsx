@@ -5,6 +5,7 @@ import List from "./componentes/lista/Lista";
 import { useState, useEffect, useRef } from "react";
 import AppChild from "./componentes/appChild/AppChild";
 import ComponentControlados from "./componentes/componentControlados/ComponentControlados";
+import Counter from "./componentes/repaso de todo/Counter";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -38,7 +39,10 @@ function App() {
         {IsFormularioVisible ? "Ocultar formulario" : "Mostrar formulario"}
       </button>
       {IsFormularioVisible ? (
-        <Formulario />
+        <>
+          <Formulario />
+          <Counter />
+        </>
       ) : (
         <>
           <Example />

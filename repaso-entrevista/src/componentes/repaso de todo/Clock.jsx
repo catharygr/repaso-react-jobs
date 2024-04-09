@@ -10,9 +10,6 @@ export default function Clock() {
   }, []);
 
   return (
-    <div className="reloj">
-      <h2>Reloj</h2>
-      <p>La hora es: {time}</p>
-    </div>
+   
   );
 }

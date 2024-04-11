@@ -6,6 +6,7 @@ import { useState, useRef } from "react";
 import AppChild from "./componentes/appChild/AppChild";
 import ComponentControlados from "./componentes/componentControlados/ComponentControlados";
 import Counter from "./componentes/repaso de todo/Counter";
+import Publicaciones from "./componentes/publicaciones/Publicaciones";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -38,6 +39,7 @@ function App() {
         <>
           <Formulario />
           <Counter />
+          <Publicaciones />
         </>
       ) : (
         <>

@@ -10,6 +10,7 @@ function Posts() {
         "https://jsonplaceholder.typicode.com/posts"
       );
       const data = await response.json();
+      console.log(data);
       setPosts(data);
     };
 

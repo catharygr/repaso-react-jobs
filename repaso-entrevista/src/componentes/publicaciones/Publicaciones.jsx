@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import "./Publicaciones.css";
 
 function Posts() {
   const [posts, setPosts] = useState([]);

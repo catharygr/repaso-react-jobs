@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import "./AppChild.css";
 export default function AppChild({ count, toggleCount, isRunning }) {
   return (
@@ -12,3 +12,9 @@ export default function AppChild({ count, toggleCount, isRunning }) {
     </div>
   );
 }
+
+AppChild.propTypes = {
+  count: PropTypes.number.isRequired,
+  toggleCount: PropTypes.func.isRequired,
+  isRunning: PropTypes.bool.isRequired,
+};

@@ -3,6 +3,7 @@ import "./Publicaciones.css";
 
 function Posts() {
   const [posts, setPosts] = useState([]);
+  const [filter, setFilter] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,6 +28,10 @@ function Posts() {
   return (
     <div>
       <h1>Publicaciones</h1>
+      <input
+        type="text"
+        onChange={(e) => setFilter(e.target.value)}
+      />
       {posts.map((post) => (
         <div key={post.id}>
           <h2>{post.title}</h2>

@@ -6,12 +6,19 @@ function Posts() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/posts"
-      );
-      const data = await response.json();
-      console.log(data);
-      setPosts(data);
+      try {
+        const response = await fetch(
+          "https://jsonplaceholder.typicode.com/posts"
+        );
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        const losTresPrimeros = data.slice(0, 3);
+        setPosts(losTresPrimeros);
+      } catch (error) {
+        console.error("Error al obtener los posts", error);
+      }
     };
 
     fetchData();

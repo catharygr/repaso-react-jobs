@@ -16,6 +16,7 @@ function Posts() {
         }
         const data = await response.json();
         const losTresPrimeros = data.slice(0, 3);
+        losTresPrimeros.sort((a, b) => a.title.localeCompare(b.title));
         setPosts(losTresPrimeros);
       } catch (error) {
         console.error("Error al obtener los posts", error);

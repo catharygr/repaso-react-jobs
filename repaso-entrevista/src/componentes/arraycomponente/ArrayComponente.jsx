@@ -34,7 +34,7 @@ function ArrayLista() {
         />
         <button
           className="btn-array"
-          onClick={agregarElemento}
+          type="submit"
           disabled={nuevoElemento.trim() === ""}
         >
           Agregar elemento

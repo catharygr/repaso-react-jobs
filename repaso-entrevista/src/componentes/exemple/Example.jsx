@@ -24,7 +24,7 @@ export default function Example() {
     promesa();
   }, []);
   const mapeo = data.map((item) => {
-    if (item.age < 25 || item.age > 27) {
+    if (item.age < 18 || item.age > 25) {
       return null;
     }
     return (

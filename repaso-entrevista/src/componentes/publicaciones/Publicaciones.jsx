@@ -7,6 +7,17 @@ function Posts() {
   const loader = useRef(null);
 
   const observer = new IntersectionObserver(handleObserver, options);
+  if (loader.current) {
+    observer.observe(loader.current);
+  }
+
+  function handleObserver(entities, observer) {
+    const target = entities[0];
+    if (target.isIntersecting) {
+      console.log("Visible");
+      observer.unobserve(target);
+    }
+  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -50,6 +61,7 @@ function Posts() {
             <p>{post.body}</p>
           </div>
         ))}
+      {posts.length > 0 && <div ref={loader}>Loading...</div>}
     </div>
   );
 }

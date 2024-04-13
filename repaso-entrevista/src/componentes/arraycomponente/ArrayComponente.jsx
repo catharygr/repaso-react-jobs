@@ -29,7 +29,12 @@ function ArrayLista() {
         value={nuevoElemento}
         onChange={handleChange}
       />
-      <button onClick={agregarElemento}>Agregar elemento</button>
+      <button
+        className="btn-array"
+        onClick={agregarElemento}
+      >
+        Agregar elemento
+      </button>
     </div>
   );
 }

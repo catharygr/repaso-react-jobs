@@ -25,19 +25,21 @@ function ArrayLista() {
           <li key={index}>{item}</li>
         ))}
       </ul>
-      <input
-        className="input-array"
-        type="text"
-        value={nuevoElemento}
-        onChange={handleChange}
-      />
-      <button
-        className="btn-array"
-        onClick={agregarElemento}
-        disabled={nuevoElemento.trim() === ""}
-      >
-        Agregar elemento
-      </button>
+      <form onSubmit={agregarElemento}>
+        <input
+          className="input-array"
+          type="text"
+          value={nuevoElemento}
+          onChange={handleChange}
+        />
+        <button
+          className="btn-array"
+          onClick={agregarElemento}
+          disabled={nuevoElemento.trim() === ""}
+        >
+          Agregar elemento
+        </button>
+      </form>
     </div>
   );
 }

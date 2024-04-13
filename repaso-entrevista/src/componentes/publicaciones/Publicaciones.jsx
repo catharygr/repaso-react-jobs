@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Publicaciones.css";
 
 function Posts() {
   const [posts, setPosts] = useState([]);
   const [filterPost, setFilterPost] = useState("");
+  const loader = useRef(null);
 
   useEffect(() => {
     const fetchData = async () => {

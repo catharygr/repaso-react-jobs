@@ -50,8 +50,9 @@ function Posts() {
 
   return (
     <div>
-      <h1>Publicaciones</h1>
+      <h3>Publicaciones</h3>
       <input
+        className="filter-post"
         type="text"
         value={filterPost}
         onChange={(e) => setFilterPost(e.target.value)}

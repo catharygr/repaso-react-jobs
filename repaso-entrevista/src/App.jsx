@@ -7,6 +7,7 @@ import AppChild from "./componentes/appChild/AppChild";
 import ComponentControlados from "./componentes/componentControlados/ComponentControlados";
 import Counter from "./componentes/repaso de todo/Counter";
 import Publicaciones from "./componentes/publicaciones/Publicaciones";
+import ArrayComponente from "./componentes/ArrayComponente";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -53,6 +54,7 @@ function App() {
             />
           </div>
           <ComponentControlados />
+          <ArrayComponente />
         </>
       )}
     </div>

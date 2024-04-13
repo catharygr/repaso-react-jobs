@@ -1,23 +1,35 @@
-function ArrayComponent() {
-  const originalArray = [1, 2, 3];
-  const modifiedArray = [...originalArray, 4]; // Crear una nueva copia con el nuevo elemento
+import { useState } from "react";
+
+function ArrayLista() {
+  const [lista, setLista] = useState(["Mango", "Pera", "Uva"]);
+  const [nuevoElemento, setNuevoElemento] = useState("");
+
+  const agregarElemento = () => {
+    setLista((prevLista) => [...prevLista, nuevoElemento]);
+    setNuevoElemento("");
+  };
+
+  function handleChange(e) {
+    const { value } = e.target;
+    setNuevoElemento(value);
+  }
 
   return (
     <div>
-      <h1>Array Original</h1>
+      <h2>Lista</h2>
       <ul>
-        {originalArray.map((item, index) => (
+        {lista.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
       </ul>
-      <h1>Array Modificado</h1>
-      <ul>
-        {modifiedArray.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
+      <input
+        type="text"
+        value={nuevoElemento}
+        onChange={handleChange}
+      />
+      <button onClick={agregarElemento}>Agregar elemento</button>
     </div>
   );
 }
 
-export default ArrayComponent;
+export default ArrayLista;

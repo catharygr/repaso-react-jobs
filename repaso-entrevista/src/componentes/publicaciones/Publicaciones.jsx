@@ -6,18 +6,26 @@ function Posts() {
   const [filterPost, setFilterPost] = useState("");
   const loader = useRef(null);
 
-  const observer = new IntersectionObserver(handleObserver, options);
-  if (loader.current) {
-    observer.observe(loader.current);
-  }
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 1.0,
+    };
 
-  function handleObserver(entities, observer) {
-    const target = entities[0];
-    if (target.isIntersecting) {
-      console.log("Visible");
-      observer.unobserve(target);
+    const observer = new IntersectionObserver(handleObserver, options);
+    if (loader.current) {
+      observer.observe(loader.current);
     }
-  }
+
+    function handleObserver(entities, observer) {
+      const target = entities[0];
+      if (target.isIntersecting) {
+        console.log("Visible");
+        observer.unobserve(target);
+      }
+    }
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {

@@ -9,6 +9,11 @@ function ArrayLista() {
     setNuevoElemento("");
   };
 
+  function handleChange(e) {
+    const { value } = e.target;
+    setNuevoElemento(value);
+  }
+
   return (
     <div>
       <h2>Lista</h2>

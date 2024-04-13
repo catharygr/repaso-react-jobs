@@ -1,4 +1,3 @@
-import "./App.css";
 import Example from "./componentes/exemple/Example";
 import Formulario from "./componentes/formulario/Formulario";
 import List from "./componentes/lista/Lista";

@@ -1,6 +1,15 @@
 .lista-array-container {
+  background-color: brown;
+  flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+}
+
+.input-array {
+  margin: 10px;
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
 }

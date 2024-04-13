@@ -24,6 +24,7 @@ function ArrayLista() {
         ))}
       </ul>
       <input
+        className="input-array"
         type="text"
         value={nuevoElemento}
         onChange={handleChange}

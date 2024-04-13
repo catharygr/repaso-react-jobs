@@ -5,7 +5,8 @@ function ArrayLista() {
   const [lista, setLista] = useState(["Mango", "Pera", "Uva"]);
   const [nuevoElemento, setNuevoElemento] = useState("");
 
-  const agregarElemento = () => {
+  const agregarElemento = (e) => {
+    e.preventDefault();
     if (nuevoElemento.trim() !== "") {
       setLista((prevLista) => [...prevLista, nuevoElemento]);
       setNuevoElemento("");
@@ -25,7 +26,10 @@ function ArrayLista() {
           <li key={index}>{item}</li>
         ))}
       </ul>
-      <form onSubmit={agregarElemento}>
+      <form
+        onSubmit={agregarElemento}
+        className="form-array"
+      >
         <input
           className="input-array"
           type="text"

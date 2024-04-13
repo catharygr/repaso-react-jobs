@@ -6,8 +6,10 @@ function ArrayLista() {
   const [nuevoElemento, setNuevoElemento] = useState("");
 
   const agregarElemento = () => {
-    setLista((prevLista) => [...prevLista, nuevoElemento]);
-    setNuevoElemento("");
+    if (nuevoElemento.trim() !== "") {
+      setLista((prevLista) => [...prevLista, nuevoElemento]);
+      setNuevoElemento("");
+    }
   };
 
   function handleChange(e) {
@@ -32,6 +34,7 @@ function ArrayLista() {
       <button
         className="btn-array"
         onClick={agregarElemento}
+        disabled={nuevoElemento.trim() === ""}
       >
         Agregar elemento
       </button>

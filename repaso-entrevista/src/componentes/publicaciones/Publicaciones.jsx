@@ -6,6 +6,8 @@ function Posts() {
   const [filterPost, setFilterPost] = useState("");
   const loader = useRef(null);
 
+  const observer = new IntersectionObserver(handleObserver, options);
+
   useEffect(() => {
     const fetchData = async () => {
       try {

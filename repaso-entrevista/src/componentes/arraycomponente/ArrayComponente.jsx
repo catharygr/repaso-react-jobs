@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./ArrayComponente.css";
 
 function ArrayLista() {
   const [lista, setLista] = useState(["Mango", "Pera", "Uva"]);
@@ -15,7 +16,7 @@ function ArrayLista() {
   }
 
   return (
-    <div>
+    <div className="lista-array-container">
       <h2>Lista</h2>
       <ul>
         {lista.map((item, index) => (

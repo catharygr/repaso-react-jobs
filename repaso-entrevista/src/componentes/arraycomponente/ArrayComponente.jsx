@@ -36,6 +36,13 @@ function ArrayLista() {
           value={nuevoElemento}
           onChange={handleChange}
         />
+        <button
+          className="btn-array"
+          type="submit"
+          disabled={nuevoElemento.trim() === ""}
+        >
+          Agregar elemento
+        </button>
       </form>
     </div>
   );

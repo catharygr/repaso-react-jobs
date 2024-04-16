@@ -5,6 +5,7 @@ function Posts() {
   const [posts, setPosts] = useState([]);
   const [filterPost, setFilterPost] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,7 +27,7 @@ function Posts() {
     };
 
     fetchData();
-  }, []);
+  }, [page]);
 
   return (
     <div>

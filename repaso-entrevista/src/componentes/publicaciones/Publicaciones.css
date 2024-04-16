@@ -11,3 +11,11 @@
 h3 {
   font-size: 1.5em;
 }
+
+.btn-post {
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border: 5px;
+  cursor: pointer;
+}

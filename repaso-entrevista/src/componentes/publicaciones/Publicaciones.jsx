@@ -7,27 +7,6 @@ function Posts() {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 1.0,
-    };
-
-    const observer = new IntersectionObserver(handleObserver, options);
-    if (loader.current) {
-      observer.observe(loader.current);
-    }
-
-    function handleObserver(entities, observer) {
-      const target = entities[0];
-      if (target.isIntersecting) {
-        console.log("Visible");
-        observer.unobserve(target);
-      }
-    }
-  }, []);
-
-  useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(

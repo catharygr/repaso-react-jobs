@@ -12,28 +12,31 @@ function Posts() {
       setIsLoading(true);
       try {
         const response = await fetch(
-          "https://jsonplaceholder.typicode.com/posts"
+          `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=5`
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        const losTresPrimeros = data.slice(0, 3);
-        losTresPrimeros.sort((a, b) => a.title.localeCompare(b.title));
-        setPosts(losTresPrimeros);
+        setPosts((prevPosts) => [...prevPosts, ...data]);
       } catch (error) {
         console.error("Error al obtener los posts", error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
     fetchData();
   }, [page]);
 
+  const loadMorePosts = () => {
+    setPage((prevPage) => prevPage + 1);
+  };
+
   return (
-    <div>
+    <div className="filter-post">
       <h3>Publicaciones</h3>
       <input
-        className="filter-post"
         type="text"
         value={filterPost}
         onChange={(e) => setFilterPost(e.target.value)}
@@ -54,7 +57,12 @@ function Posts() {
       {isLoading ? (
         <div>Cargando...</div>
       ) : (
-        <button onClick={loadMorePosts}>Cargar más</button>
+        <button
+          className="btn-post"
+          onClick={loadMorePosts}
+        >
+          Cargar más
+        </button>
       )}
     </div>
   );

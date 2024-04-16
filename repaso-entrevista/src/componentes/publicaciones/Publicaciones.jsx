@@ -77,7 +77,7 @@ function Posts() {
       {isLoading ? (
         <div>Cargando...</div>
       ) : (
-        <div className="container btn">
+        <div className="btn-container">
           <button
             className="btn-post"
             onClick={loadMorePosts}

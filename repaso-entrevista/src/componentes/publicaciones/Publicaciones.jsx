@@ -8,6 +8,7 @@ function Posts() {
 
   useEffect(() => {
     const fetchData = async () => {
+      setIsLoading(true);
       try {
         const response = await fetch(
           "https://jsonplaceholder.typicode.com/posts"
@@ -49,7 +50,11 @@ function Posts() {
             <p>{post.body}</p>
           </div>
         ))}
-      {posts.length > 0 && <div ref={loader}>Loading...</div>}
+      {isLoading ? (
+        <div>Cargando...</div>
+      ) : (
+        <button onClick={loadMorePosts}>Cargar más</button>
+      )}
     </div>
   );
 }

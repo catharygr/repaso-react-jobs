@@ -3,6 +3,11 @@
   padding: 10px;
 }
 
+.input-post {
+  padding: 10px;
+  margin: 10px 0;
+}
+
 h3 {
   font-size: 1.5em;
 }

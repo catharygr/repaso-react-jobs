@@ -12,7 +12,7 @@ function Posts() {
       setIsLoading(true);
       try {
         const response = await fetch(
-          `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=5`
+          `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=1`
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -37,6 +37,7 @@ function Posts() {
     <div className="filter-post">
       <h3>Publicaciones</h3>
       <input
+        className="input-post"
         type="text"
         value={filterPost}
         onChange={(e) => setFilterPost(e.target.value)}

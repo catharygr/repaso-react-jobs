@@ -1,10 +1,10 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import "./Publicaciones.css";
 
 function Posts() {
   const [posts, setPosts] = useState([]);
   const [filterPost, setFilterPost] = useState("");
-  const loader = useRef(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const options = {

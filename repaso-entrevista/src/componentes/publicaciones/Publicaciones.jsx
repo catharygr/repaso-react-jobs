@@ -33,6 +33,25 @@ function Posts() {
     setPage((prevPage) => prevPage + 1);
   };
 
+  const showLessPosts = async () => {
+    setIsLoading(true);
+    try {
+      const response = await fetch(
+        `https://jsonplaceholder.typicode.com/posts?_page=1&_limit=3`
+      );
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+      setPosts(data);
+      setPage(3);
+    } catch (error) {
+      console.error("Error al obtener los posts", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div className="filter-post">
       <h3>Publicaciones</h3>
@@ -58,12 +77,22 @@ function Posts() {
       {isLoading ? (
         <div>Cargando...</div>
       ) : (
-        <button
-          className="btn-post"
-          onClick={loadMorePosts}
-        >
-          Cargar más
-        </button>
+        <div className="container btn">
+          <button
+            className="btn-post"
+            onClick={loadMorePosts}
+          >
+            Cargar más
+          </button>
+          {posts.length > 3 && (
+            <button
+              className="btn-post"
+              onClick={showLessPosts}
+            >
+              Mostrar menos
+            </button>
+          )}
+        </div>
       )}
     </div>
   );

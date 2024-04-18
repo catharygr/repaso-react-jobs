@@ -1,6 +1,31 @@
 .resumen-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 10px 0;
+}
+
+.resumen-container h2 {
+  margin: 0 10px;
+}
+
+.container-counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.btn-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: orange;
+  cursor: pointer;
+  gap: 1rem;
 }

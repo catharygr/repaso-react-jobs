@@ -32,10 +32,12 @@ export default function Resumen() {
 function Counter() {
   const [count, setCount] = React.useState(0);
   return (
-    <div>
+    <div className="container-counter">
       <p>Contador: {count}</p>
-      <button onClick={() => setCount(count + 1)}>Incrementar</button>
-      <button onClick={() => setCount(count - 1)}>Decrementar</button>
+      <div className="btn-counter">
+        <button onClick={() => setCount(count + 1)}>Incrementar</button>
+        <button onClick={() => setCount(count - 1)}>Decrementar</button>
+      </div>
     </div>
   );
 }

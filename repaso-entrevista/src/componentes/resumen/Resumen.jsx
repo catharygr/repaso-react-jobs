@@ -31,6 +31,11 @@ export default function Resumen() {
 
 function Counter() {
   const [count, setCount] = React.useState(0);
+
+  React.useEffect(() => {
+    console.log("Se actualizó el componente");
+  }, [count]);
+
   return (
     <div className="container-counter">
       <p>Contador: {count}</p>

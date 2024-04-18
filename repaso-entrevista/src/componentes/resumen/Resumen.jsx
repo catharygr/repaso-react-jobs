@@ -1,29 +1,41 @@
 import React from "react";
+import "./Resumen.css";
 
 export default function Resumen() {
   return (
-    <div>
-      <h1>Resumen</h1>
+    <div className="resumen-container">
+      <h2>Resumen</h2>
       <p>Resumiendo lo estudiado</p>
       <Counter />
     </div>
   );
 }
 
-export class Counter extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { count: 0 };
-  }
+// export class Counter extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = { count: 0 };
+//   }
 
-  render() {
-    return (
-      <div>
-        <p>Contador: {this.state.count}</p>
-        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
-          Incrementar
-        </button>
-      </div>
-    );
-  }
+//   render() {
+//     return (
+//       <div>
+//         <p>Contador: {this.state.count}</p>
+//         <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+//           Incrementar
+//         </button>
+//       </div>
+//     );
+//   }
+// }
+
+function Counter() {
+  const [count, setCount] = React.useState(0);
+  return (
+    <div>
+      <p>Contador: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Incrementar</button>
+      <button onClick={() => setCount(count - 1)}>Decrementar</button>
+    </div>
+  );
 }

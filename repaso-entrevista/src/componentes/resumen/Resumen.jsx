@@ -35,8 +35,18 @@ function Counter() {
     <div className="container-counter">
       <p>Contador: {count}</p>
       <div className="container-btn">
-        <button onClick={() => setCount(count + 1)}>Incrementar</button>
-        <button onClick={() => setCount(count - 1)}>Decrementar</button>
+        <button
+          className="btn"
+          onClick={() => setCount(count + 1)}
+        >
+          Incrementar
+        </button>
+        <button
+          className="btn"
+          onClick={() => setCount(count - 1)}
+        >
+          Decrementar
+        </button>
       </div>
     </div>
   );

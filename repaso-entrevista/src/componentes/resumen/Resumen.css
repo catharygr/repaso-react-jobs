@@ -18,14 +18,9 @@
   margin: 0 10px;
 }
 
-.btn-counter {
+.container-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: orange;
-  cursor: pointer;
-  gap: 1rem;
+  margin: 10px 0;
 }

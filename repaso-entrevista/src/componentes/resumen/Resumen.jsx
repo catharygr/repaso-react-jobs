@@ -35,7 +35,7 @@ function Counter() {
   const [count, setCount] = React.useState(0);
 
   React.useEffect(() => {
-    console.log("Se actualizó el componente");
+    console.log("Se actualizó el contador");
   }, [count]);
 
   return (

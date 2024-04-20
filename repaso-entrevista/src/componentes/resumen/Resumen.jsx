@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import "./Resumen.css";
 
@@ -7,6 +8,7 @@ export default function Resumen() {
       <h2>Resumen</h2>
       <p>Resumiendo lo estudiado</p>
       <Counter />
+      <Card title="Título del card">Contenido del card</Card>
     </div>
   );
 }
@@ -53,6 +55,15 @@ function Counter() {
           Decrementar
         </button>
       </div>
+    </div>
+  );
+}
+
+function Card(props) {
+  return (
+    <div>
+      <h3>{props.title}</h3>
+      <p>{props.children}</p>
     </div>
   );
 }

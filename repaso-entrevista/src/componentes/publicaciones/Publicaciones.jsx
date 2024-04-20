@@ -67,7 +67,7 @@ function Posts() {
         )
         .map((post) => (
           <div
-            key={`${post.id}-${page}`}
+            key={`${post.id}-${Date.now()}`}
             className="post"
           >
             <h2>{post.title}</h2>

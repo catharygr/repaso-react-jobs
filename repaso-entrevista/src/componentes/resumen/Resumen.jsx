@@ -8,7 +8,7 @@ export default function Resumen() {
       <h2>Resumen</h2>
       <p>Resumiendo lo estudiado</p>
       <Counter />
-      <Card title="Título del card">Contenido del card</Card>
+      <Card title="Título del card" />
     </div>
   );
 }

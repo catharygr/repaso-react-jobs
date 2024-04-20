@@ -65,9 +65,9 @@ function Posts() {
         .filter((post) =>
           post.title.toLowerCase().includes(filterPost.toLowerCase())
         )
-        .map((post) => (
+        .map((post, index) => (
           <div
-            key={`${post.id}-${Date.now()}`}
+            key={index}
             className="post"
           >
             <h2>{post.title}</h2>

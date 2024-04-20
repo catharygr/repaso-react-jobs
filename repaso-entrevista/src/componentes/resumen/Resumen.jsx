@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from "react";
 import "./Resumen.css";
 
@@ -8,7 +7,7 @@ export default function Resumen() {
       <h2>Resumen</h2>
       <p>Resumiendo lo estudiado</p>
       <Counter />
-      <Card title="Título del card" />
+      <Card title="Título del card">Contenido del card como children</Card>
     </div>
   );
 }

@@ -14,6 +14,7 @@ function App() {
   const [count, setCount] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const contadorRef = useRef(null);
+  const inputEl = useRef();
   const [IsFormularioVisible, setIsFormularioVisible] = useState(true);
   const [isResumenVisible, setIsResumenVisible] = useState(false);
 
@@ -37,12 +38,16 @@ function App() {
     setIsResumenVisible(!isResumenVisible);
   }
 
+  const focusInput = () => {
+    inputEl.current.focus();
+  };
+
   return (
     <div className="container">
       {isResumenVisible ? (
         <>
           <Resumen />
-          <TextInput />
+          <TextInput ref={inputEl} />
         </>
       ) : (
         <>

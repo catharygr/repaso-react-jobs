@@ -47,7 +47,7 @@ function App() {
       {isResumenVisible ? (
         <>
           <Resumen />
-          <TextInput ref={useRef} />
+          <TextInput ref={inputEl} />
           <button onClick={focusInput}>Enfocar el focus</button>
         </>
       ) : (

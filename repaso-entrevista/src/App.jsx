@@ -48,6 +48,7 @@ function App() {
         <>
           <Resumen />
           <TextInput ref={inputEl} />
+          <button onClick={focusInput}>Enfocar input</button>
         </>
       ) : (
         <>

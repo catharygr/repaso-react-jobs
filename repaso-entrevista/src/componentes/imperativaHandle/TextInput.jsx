@@ -11,7 +11,7 @@ export default function TextInput(referece) {
         inputEl.current.focus();
       },
     }),
-    [inputEl]
+    []
   );
   return (
     <input

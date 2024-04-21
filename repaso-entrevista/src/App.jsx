@@ -11,9 +11,9 @@ import Resumen from "./componentes/resumen/Resumen";
 import TextInput from "./componentes/imperativeHandle/TextInput";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [isRunning, setIsRunning] = useState(false);
-  const contadorRef = useRef(null);
+  // const [count, setCount] = useState(0);
+  // const [isRunning, setIsRunning] = useState(false);
+  // const contadorRef = useRef(null);
   const inputEl = useRef();
   const [IsFormularioVisible, setIsFormularioVisible] = useState(true);
   const [isResumenVisible, setIsResumenVisible] = useState(false);
@@ -21,18 +21,18 @@ function App() {
   function toggleFormulario() {
     setIsFormularioVisible(!IsFormularioVisible);
   }
-  const toggleCount = () => {
-    if (isRunning) {
-      clearInterval(contadorRef.current);
-      contadorRef.current = null;
-      setIsRunning(false);
-    } else {
-      contadorRef.current = setInterval(() => {
-        setCount((currentCount) => currentCount + 1);
-      }, 1000);
-      setIsRunning(true);
-    }
-  };
+  // const toggleCount = () => {
+  //   if (isRunning) {
+  //     clearInterval(contadorRef.current);
+  //     contadorRef.current = null;
+  //     setIsRunning(false);
+  //   } else {
+  //     contadorRef.current = setInterval(() => {
+  //       setCount((currentCount) => currentCount + 1);
+  //     }, 1000);
+  //     setIsRunning(true);
+  //   }
+  // };
 
   function toggleResumen() {
     setIsResumenVisible(!isResumenVisible);
@@ -68,7 +68,7 @@ function App() {
               <div>
                 <AppChild
                   count={count}
-                  toggleCount={toggleCount}
+                  // toggleCount={toggleCount}
                   isRunning={isRunning}
                 />
               </div>

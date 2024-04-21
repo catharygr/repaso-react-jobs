@@ -1,7 +1,7 @@
 import { useRef, useImperativeHandle, forwardRef } from "react";
 import "./TextInput.css";
 
- const TextInput = forwardRef(props, reference) {
+const TextInput = forwardRef((props, reference) => {
   const inputEl = useRef(null);
 
   useImperativeHandle(
@@ -21,6 +21,6 @@ import "./TextInput.css";
       placeholder="Escribe algo..."
     />
   );
-};
+});
 
-export default forwardRef(TextInput);
+export default TextInput;

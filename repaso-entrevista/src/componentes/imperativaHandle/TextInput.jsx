@@ -4,7 +4,15 @@ import "./TextInput.css";
 export default function TextInput(referece) {
   const inputEl = useRef(null);
 
-  useImperativaHandle(() => ({}), [inputEl]);
+  useImperativaHandle(
+    referece,
+    () => ({
+      focus: () => {
+        inputEl.current.focus();
+      },
+    }),
+    [inputEl]
+  );
   return (
     <input
       className="input-text"

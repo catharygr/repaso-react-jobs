@@ -14,6 +14,7 @@ function App() {
   const [isRunning, setIsRunning] = useState(false);
   const contadorRef = useRef(null);
   const [IsFormularioVisible, setIsFormularioVisible] = useState(true);
+  const [isResumenVisible, setIsResumenVisible] = useState(false);
 
   function toggleFormulario() {
     setIsFormularioVisible(!IsFormularioVisible);
@@ -31,35 +32,38 @@ function App() {
     }
   };
 
-  return (
-    <div className="container">
-      <button onClick={toggleFormulario}>
-        {IsFormularioVisible ? "Ocultar formulario" : "Mostrar formulario"}
-      </button>
-      {IsFormularioVisible ? (
-        <>
-          <Formulario />
-          <Counter />
-          <Publicaciones />
-          <Resumen />
-        </>
-      ) : (
-        <>
-          <Example />
-          <List />
-          <div>
-            <AppChild
-              count={count}
-              toggleCount={toggleCount}
-              isRunning={isRunning}
-            />
-          </div>
-          <ComponentControlados />
-          <ArrayComponente />
-        </>
-      )}
-    </div>
-  );
+  function toggleResumen() {
+    setIsResumenVisible(!isResumenVisible);
+  }
 }
 
+return (
+  <div className="container">
+    <button onClick={toggleFormulario}>
+      {IsFormularioVisible ? "Ocultar formulario" : "Mostrar formulario"}
+    </button>
+    {IsFormularioVisible ? (
+      <>
+        <Formulario />
+        <Counter />
+        <Publicaciones />
+        {isResumenVisible && <Resumen />}
+      </>
+    ) : (
+      <>
+        <Example />
+        <List />
+        <div>
+          <AppChild
+            count={count}
+            toggleCount={toggleCount}
+            isRunning={isRunning}
+          />
+        </div>
+        <ComponentControlados />
+        <ArrayComponente />
+      </>
+    )}
+  </div>
+);
 export default App;

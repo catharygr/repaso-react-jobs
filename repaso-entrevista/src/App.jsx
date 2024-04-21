@@ -8,6 +8,7 @@ import Counter from "./componentes/repaso de todo/Counter";
 import Publicaciones from "./componentes/publicaciones/Publicaciones";
 import ArrayComponente from "./componentes/arraycomponente/ArrayComponente";
 import Resumen from "./componentes/resumen/Resumen";
+import TextInput from "./componentes/imperativaHandle/TextInput";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -39,7 +40,10 @@ function App() {
   return (
     <div className="container">
       {isResumenVisible ? (
-        <Resumen />
+        <>
+          <Resumen />
+          <TextInput />
+        </>
       ) : (
         <>
           <button onClick={toggleFormulario}>

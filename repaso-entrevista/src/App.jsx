@@ -47,8 +47,6 @@ function App() {
       {isResumenVisible ? (
         <>
           <Resumen />
-          <TextInput ref={inputEl} />
-          <button onClick={focusInput}>Enfocar input</button>
         </>
       ) : (
         <>
@@ -71,6 +69,8 @@ function App() {
                   toggleCount={toggleCount}
                   isRunning={isRunning}
                 />
+                <TextInput ref={inputEl} />
+                <button onClick={focusInput}>Enfocar input</button>
               </div>
               <ComponentControlados />
               <ArrayComponente />

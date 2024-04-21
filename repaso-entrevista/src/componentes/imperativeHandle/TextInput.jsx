@@ -1,11 +1,11 @@
 import { useRef, useImperativeHandle } from "react";
 import "./TextInput.css";
 
-export default function TextInput(referece) {
+export default function TextInput(ref) {
   const inputEl = useRef(null);
 
   useImperativeHandle(
-    referece,
+    ref,
     () => ({
       focus: () => {
         inputEl.current.focus();

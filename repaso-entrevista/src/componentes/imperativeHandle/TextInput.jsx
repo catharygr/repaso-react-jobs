@@ -24,7 +24,15 @@ const TextInput = forwardRef((props, ref) => {
         type="text"
         ref={inputEl}
         placeholder="Escribe algo..."
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
       />
+      <button
+        type="submit"
+        className="input-button"
+      >
+        Enviar
+      </button>
     </form>
   );
 });

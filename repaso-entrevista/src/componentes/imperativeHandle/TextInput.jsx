@@ -11,12 +11,14 @@ const TextInput = forwardRef((props, ref) => {
   }));
 
   return (
-    <input
-      className="input-text"
-      type="text"
-      ref={inputEl}
-      placeholder="Escribe algo..."
-    />
+    <form on>
+      <input
+        className="input-text"
+        type="text"
+        ref={inputEl}
+        placeholder="Escribe algo..."
+      />
+    </form>
   );
 });
 

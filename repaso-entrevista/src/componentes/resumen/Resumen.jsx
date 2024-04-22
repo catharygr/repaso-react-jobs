@@ -8,7 +8,11 @@ export default function Resumen() {
       <h2>Resumen</h2>
       <p>Resumiendo lo estudiado</p>
       <Counter />
-      <Card title="Título del card">Contenido del card como children</Card>
+      <Card title="Título del card">
+        <li>Mojón</li>
+        <li>Elemento</li>
+        <li>Item</li>
+      </Card>
       <Button text="Botón de prueba" />
       <Button text="Otro botón de prueba" />
     </div>
@@ -61,11 +65,11 @@ function Counter() {
   );
 }
 
-function Card(props) {
+function Card({ children }) {
   return (
     <div>
-      <h3>{props.title}</h3>
-      <p>{props.children}</p>
+      {/* <h3>{title}</h3> */}
+      <ul>{children}</ul>
     </div>
   );
 }

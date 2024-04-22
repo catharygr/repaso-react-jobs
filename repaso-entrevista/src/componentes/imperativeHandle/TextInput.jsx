@@ -1,7 +1,8 @@
-import { useRef, useImperativeHandle, forwardRef } from "react";
+import { useRef, useImperativeHandle, forwardRef, useState } from "react";
 import "./TextInput.css";
 
 const TextInput = forwardRef((props, ref) => {
+  const [inputValue, setInputValue] = useState("");
   const inputEl = useRef();
 
   useImperativeHandle(ref, () => ({
@@ -13,6 +14,7 @@ const TextInput = forwardRef((props, ref) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(inputEl.current.value);
+    setInputValue("");
   };
 
   return (

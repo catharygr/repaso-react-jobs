@@ -28,7 +28,6 @@ const TextInput = forwardRef((props, ref) => {
   }
 
   return (
-    // createElement("h2", null, "Texto de ejemplo"),
     <>
       <MiElemento />
 

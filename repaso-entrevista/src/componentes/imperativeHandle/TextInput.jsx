@@ -1,4 +1,10 @@
-import { useRef, useImperativeHandle, forwardRef, useState } from "react";
+import {
+  useRef,
+  useImperativeHandle,
+  forwardRef,
+  useState,
+  createElement,
+} from "react";
 import "./TextInput.css";
 
 const TextInput = forwardRef((props, ref) => {
@@ -17,23 +23,32 @@ const TextInput = forwardRef((props, ref) => {
     setInputValue("");
   };
 
+  function MiElemento() {
+    return createElement("h2", null, "Texto de ejemplo");
+  }
+
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        className="input-text"
-        type="text"
-        ref={inputEl}
-        placeholder="Escribe algo..."
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-      />
-      <button
-        type="submit"
-        className="input-button"
-      >
-        Enviar
-      </button>
-    </form>
+    // createElement("h2", null, "Texto de ejemplo"),
+    <>
+      <MiElemento />
+
+      <form onSubmit={handleSubmit}>
+        <input
+          className="input-text"
+          type="text"
+          ref={inputEl}
+          placeholder="Escribe algo..."
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
+        <button
+          type="submit"
+          className="input-button"
+        >
+          Enviar
+        </button>
+      </form>
+    </>
   );
 });
 

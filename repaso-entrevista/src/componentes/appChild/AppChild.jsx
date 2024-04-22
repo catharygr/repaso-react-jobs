@@ -1,13 +1,14 @@
 import PropTypes from "prop-types";
 import "./AppChild.css";
 export default function AppChild({ count, toggleCount, isRunning }) {
+  const countDos = count + 1;
   return (
     <div className="container">
       <button
         className="btn"
         onClick={toggleCount}
       >
-        {isRunning ? "Stop" : "Start"} count ( {count})
+        {isRunning ? "Stop" : "Start"} count ( {countDos})
       </button>
     </div>
   );

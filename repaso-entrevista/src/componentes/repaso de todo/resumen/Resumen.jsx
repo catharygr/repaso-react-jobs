@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import "./Resumen.css";
+import CuentaAtras from "../CuentaAtras";
 
 export default function Resumen() {
   return (
@@ -15,6 +16,7 @@ export default function Resumen() {
       </Card>
       <Button text="Botón de prueba" />
       <Button text="Otro botón de prueba" />
+      <CuentaAtras valorInicial={5} />
     </div>
   );
 }

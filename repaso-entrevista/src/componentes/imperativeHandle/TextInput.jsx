@@ -10,8 +10,13 @@ const TextInput = forwardRef((props, ref) => {
     },
   }));
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(inputEl.current.value);
+  };
+
   return (
-    <form on>
+    <form onSubmit={handleSubmit}>
       <input
         className="input-text"
         type="text"

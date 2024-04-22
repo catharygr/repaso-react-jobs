@@ -9,6 +9,8 @@ export default function Resumen() {
       <p>Resumiendo lo estudiado</p>
       <Counter />
       <Card title="Título del card">Contenido del card como children</Card>
+      <Button text="Botón de prueba" />
+      <Button text="Otro botón de prueba" />
     </div>
   );
 }
@@ -66,4 +68,8 @@ function Card(props) {
       <p>{props.children}</p>
     </div>
   );
+}
+
+function Button(props) {
+  return <button>{props.text}</button>;
 }

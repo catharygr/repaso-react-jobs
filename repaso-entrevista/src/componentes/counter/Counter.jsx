@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Counter.css";
-import Clock from "./componentes/clock/Clock";
+import Clock from "../counter/clock/Clock";
 
 export default function Counter() {
   const [counter, setCounter] = useState(0);

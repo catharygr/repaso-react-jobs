@@ -43,12 +43,14 @@ function Counter() {
   const [count, setCount] = React.useState(0);
 
   React.useEffect(() => {
-    console.log("Se actualizó el contador");
-  }, [count]);
+    // console.log("Se actualizó el contador");
+    console.log("El componente se montó");
+  }, []);
 
   return (
     <div className="container-counter">
       <p>Contador: {count}</p>
+      <p>Abre la consola y re-dimensiona la ventana</p>
       <div className="container-btn">
         <button
           className="btn"

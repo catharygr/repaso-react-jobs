@@ -14,8 +14,15 @@ export default function Resumen() {
         <li>Elemento</li>
         <li>Item</li>
       </Card>
-      <Button text="Botón de prueba" />
-      <Button text="Otro botón de prueba" />
+
+      <Button
+        className="unBtn"
+        text="Botón de prueba"
+      />
+      <Button
+        className="dosBtn"
+        text="Otro botón de prueba"
+      />
       <CuentaAtras valorInicial={5} />
     </div>
   );
@@ -71,10 +78,10 @@ function Counter() {
 
 function Card({ children }) {
   return (
-    <div>
+    <>
       {/* <h3>{title}</h3> */}
       <ul>{children}</ul>
-    </div>
+    </>
   );
 }
 

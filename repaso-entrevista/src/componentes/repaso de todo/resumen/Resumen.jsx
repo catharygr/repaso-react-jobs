@@ -45,7 +45,7 @@ function Counter() {
   React.useEffect(() => {
     // console.log("Se actualizó el contador");
     console.log("El componente se montó");
-  }, []);
+  }, [count]);
 
   return (
     <div className="container-counter">

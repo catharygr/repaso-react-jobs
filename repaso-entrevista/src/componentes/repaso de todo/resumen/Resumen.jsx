@@ -10,7 +10,7 @@ export default function Resumen() {
       <p>Resumiendo lo estudiado</p>
       <Counter />
       <Card title="Título del card">
-        <li>Mojón</li>
+        <li>Menu</li>
         <li>Elemento</li>
         <li>Item</li>
       </Card>

@@ -24,3 +24,9 @@
   align-items: center;
   margin: 10px 0;
 }
+
+.btn-componente {
+  background-color: brown;
+  color: white;
+  padding: 5px 10px;
+}

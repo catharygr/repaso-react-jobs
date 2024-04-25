@@ -24,21 +24,3 @@
   align-items: center;
   margin: 10px 0;
 }
-
-.btn {
-  padding: 10px 20px;
-  margin: 0 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: purple;
-  cursor: pointer;
-}
-
-.unBtn {
-  padding: 10px 20px;
-  margin: 0 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: yellowgreen;
-  cursor: pointer;
-}

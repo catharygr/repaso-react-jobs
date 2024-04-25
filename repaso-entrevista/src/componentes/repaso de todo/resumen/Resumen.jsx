@@ -80,5 +80,5 @@ function Card({ children }) {
 }
 
 function Button(props) {
-  return <button className="bt">{props.text}</button>;
+  return <button className="btn-componente">{props.text}</button>;
 }

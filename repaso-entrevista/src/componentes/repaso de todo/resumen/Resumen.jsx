@@ -15,14 +15,6 @@ export default function Resumen() {
         <li>Item</li>
       </Card>
 
-      <Button
-        className="unBtn"
-        text="Botón de prueba"
-      />
-      <Button
-        className="dosBtn"
-        text="Otro botón de prueba"
-      />
       <CuentaAtras valorInicial={5} />
     </div>
   );

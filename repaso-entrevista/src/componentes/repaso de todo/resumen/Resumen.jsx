@@ -15,6 +15,8 @@ export default function Resumen() {
         <li>Item</li>
       </Card>
 
+      <Button text="Botón de prueba" />
+      <Button text="Otro botón de prueba" />
       <CuentaAtras valorInicial={5} />
     </div>
   );
@@ -78,5 +80,5 @@ function Card({ children }) {
 }
 
 function Button(props) {
-  return <button>{props.text}</button>;
+  return <button className="bt">{props.text}</button>;
 }

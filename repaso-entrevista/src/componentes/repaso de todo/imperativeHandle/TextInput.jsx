@@ -40,6 +40,12 @@ const TextInput = forwardRef((props, ref) => {
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
+        <button
+          type="submit"
+          className="input-button"
+        >
+          Enviar
+        </button>
       </form>
     </>
   );

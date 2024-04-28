@@ -68,7 +68,17 @@ export default function Formulario() {
             Enviar
           </button>
         </form>
-
+        {modal && (
+          <div className="modal">
+            <p>Formulario enviado</p>
+            <button
+              className="btn-modal"
+              onClick={() => setModal(false)}
+            >
+              Cerrar
+            </button>
+          </div>
+        )}
         <button
           className="btn-focus"
           onClick={handleClickFocus}

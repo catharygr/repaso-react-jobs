@@ -74,26 +74,6 @@ function Posts() {
             <p>{post.body}</p>
           </div>
         ))}
-      {isLoading ? (
-        <div>Cargando...</div>
-      ) : (
-        <div className="btn-container">
-          <button
-            className="btn-post"
-            onClick={loadMorePosts}
-          >
-            Cargar más
-          </button>
-          {posts.length > 3 && (
-            <button
-              className="btn-post"
-              onClick={showLessPosts}
-            >
-              Mostrar menos
-            </button>
-          )}
-        </div>
-      )}
     </div>
   );
 }

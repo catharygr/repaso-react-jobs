@@ -1,6 +1,8 @@
 import { useState, useEffect, Suspense } from "react";
 import "./Publicaciones.css";
 
+const LazyComponent = React.lazy(() => import("LazyComponent"));
+
 function Posts() {
   const [posts, setPosts] = useState([]);
   const [filterPost, setFilterPost] = useState("");

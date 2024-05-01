@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { Suspense, lazy } from "react";
+import React, { Suspense } from "react";
 import "./Resumen.css";
 import CuentaAtras from "../CuentaAtras";
 

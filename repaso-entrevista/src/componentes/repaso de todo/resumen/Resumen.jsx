@@ -3,6 +3,8 @@ import React, { Suspense } from "react";
 import "./Resumen.css";
 import CuentaAtras from "../CuentaAtras";
 
+const LazyComponent = React.lazy(() => import("../LazyComponent"));
+
 export default function Resumen() {
   return (
     <div className="resumen-container">

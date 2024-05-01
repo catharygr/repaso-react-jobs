@@ -1,7 +1,7 @@
-import { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import "./Publicaciones.css";
 
-const LazyComponent = React.lazy(() => import("LazyComponent"));
+const LazyComponent = React.lazy(() => import("./LazyComponent"));
 
 function Posts() {
   const [posts, setPosts] = useState([]);
@@ -57,6 +57,9 @@ function Posts() {
   return (
     <div className="filter-post">
       <h3>Publicaciones</h3>
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyComponent />
+      </Suspense>
       <input
         className="input-post"
         type="text"

@@ -7,7 +7,7 @@ import ComponentControlados from "./componentes/componentControlados/ComponentCo
 import Counter from "./componentes/counter/Counter";
 import Publicaciones from "./componentes/publicaciones/Publicaciones";
 import ArrayComponente from "./componentes/arraycomponente/ArrayComponente";
-import { Resumen } from "./componentes/repaso de todo/resumen/Resumen";
+import Resumen from "./componentes/repaso de todo/resumen/Resumen";
 import TextInput from "./componentes/repaso de todo/imperativeHandle/TextInput";
 
 function App() {

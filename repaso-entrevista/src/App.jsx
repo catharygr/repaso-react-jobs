@@ -5,7 +5,7 @@ import List from "./componentes/lista/Lista";
 import AppChild from "./componentes/appChild/AppChild";
 import ComponentControlados from "./componentes/componentControlados/ComponentControlados";
 import Counter from "./componentes/counter/Counter";
-import Publicaciones from "./componentes/publicaciones/Publicaciones";
+import { Publicaciones } from "./componentes/publicaciones/Publicaciones";
 import ArrayComponente from "./componentes/arraycomponente/ArrayComponente";
 import Resumen from "./componentes/repaso de todo/resumen/Resumen";
 import TextInput from "./componentes/repaso de todo/imperativeHandle/TextInput";

@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
-import React, { Suspense } from "react";
+import React from "react";
 import "./Resumen.css";
 import CuentaAtras from "../CuentaAtras";
 
-const LazyComponent = React.lazy(() => import("./LazyComponent"));
+const LazyComponent = React.lazy(() => import("LazyComponent"));
 
-export function Resumen() {
+export default function Resumen() {
   return (
     <div className="resumen-container">
       <h2>Resumen</h2>
@@ -87,5 +87,3 @@ function Card({ children }) {
 function Button(props) {
   return <button className="btn-componente">{props.text}</button>;
 }
-
-export default LazyComponent;

@@ -10,6 +10,9 @@ export default function Resumen() {
     <div className="resumen-container">
       <h2>Resumen</h2>
       <p>Resumiendo lo estudiado</p>
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyComponent />
+      </Suspense>
       <Counter />
       <Card title="Título del card">
         <li>Menu</li>

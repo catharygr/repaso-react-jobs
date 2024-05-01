@@ -3,7 +3,7 @@ import "./Publicaciones.css";
 
 const LazyComponent = React.lazy(() => import("./LazyComponent"));
 
-function Posts() {
+export function Posts() {
   const [posts, setPosts] = useState([]);
   const [filterPost, setFilterPost] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -103,4 +103,4 @@ function Posts() {
   );
 }
 
-export default Posts;
+export default LazyComponent;

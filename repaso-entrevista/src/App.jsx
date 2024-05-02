@@ -69,7 +69,10 @@ function App() {
           ) : (
             <>
               <Example />
-              <List />
+              <List
+                id={1}
+                name={"Jonh Doe"}
+              />
               <div>
                 <AppChild
                   count={count}

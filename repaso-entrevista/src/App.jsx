@@ -43,6 +43,10 @@ function App() {
     inputEl.current.focus();
   };
 
+  const onClick = (id) => {
+    console.log("Click en el botón con id: ", id);
+  };
+
   return (
     <div className="container">
       {isResumenVisible ? (

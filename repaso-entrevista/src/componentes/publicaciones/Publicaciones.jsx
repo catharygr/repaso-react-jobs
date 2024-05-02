@@ -1,7 +1,7 @@
-import React, { useState, useEffect, Suspense } from "react";
+import { useState, useEffect, Suspense, lazy } from "react";
 import "./Publicaciones.css";
 
-const LazyComponent = React.lazy(() => import("./LazyComponent"));
+const LazyComponent = lazy(() => import("./LazyComponent"));
 
 export function Posts() {
   const [posts, setPosts] = useState([]);

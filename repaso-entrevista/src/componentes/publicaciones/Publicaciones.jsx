@@ -103,4 +103,4 @@ export function Posts() {
   );
 }
 
-export default LazyComponent;
+export default Posts;

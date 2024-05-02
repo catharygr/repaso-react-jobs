@@ -75,7 +75,11 @@ function App() {
               </div>
               <ComponentControlados />
               <ArrayComponente />
-              <Button />
+              <Button
+                id="1"
+                text="Mi botón del componente Button"
+                onClick={onClick}
+              />
             </>
           )}
         </>

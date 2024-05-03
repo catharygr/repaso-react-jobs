@@ -16,7 +16,10 @@ export default function Lista() {
         ))}
       </ul>
       <ul>
-        <List />
+        <List
+          id="1"
+          name="Jonh Doe"
+        />
       </ul>
     </div>
   );

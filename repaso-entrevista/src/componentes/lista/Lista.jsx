@@ -3,11 +3,6 @@ import List from "./List";
 export default function Lista() {
   const items = ["apple", "banana", "orange"];
 
-  const item = {
-    id: 1,
-    name: "Cathy",
-  };
-
   items.push("kiwi");
   items.pop();
   items.shift();
@@ -16,12 +11,12 @@ export default function Lista() {
   return (
     <div className="central">
       <ul className="lista">
-        {item.map((item, index) => (
+        {items.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
       </ul>
       <ul>
-        <List item={item} />
+        <List />
       </ul>
     </div>
   );

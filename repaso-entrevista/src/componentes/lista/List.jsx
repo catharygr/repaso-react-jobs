@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-export default function List({ items }) {
+export default function List({ listado }) {
   return (
     <ul>
-      {items.map((item) => (
+      {listado.map((item) => (
         <li key={item.id}>{item.name}</li>
       ))}
     </ul>

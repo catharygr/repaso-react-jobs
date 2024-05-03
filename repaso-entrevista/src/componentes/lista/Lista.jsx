@@ -16,7 +16,7 @@ export default function Lista() {
   return (
     <div className="central">
       <ul className="lista">
-        {items.map((item, index) => (
+        {item.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
       </ul>

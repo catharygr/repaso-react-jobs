@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import Example from "./componentes/exemple/Example";
 import Formulario from "./componentes/formulario/Formulario";
-import List from "./componentes/lista/Lista";
+import Lista from "./componentes/lista/Lista";
 import AppChild from "./componentes/appChild/AppChild";
 import ComponentControlados from "./componentes/componentControlados/ComponentControlados";
 import Counter from "./componentes/counter/Counter";
@@ -69,10 +69,7 @@ function App() {
           ) : (
             <>
               <Example />
-              <List
-                id={1}
-                name={"Jonh Doe"}
-              />
+              <Lista />
               <div>
                 <AppChild
                   count={count}

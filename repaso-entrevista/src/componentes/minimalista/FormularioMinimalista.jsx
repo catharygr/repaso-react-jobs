@@ -25,7 +25,7 @@ export default function FormularioMinimalista() {
       </label>
       <button
         type="submit"
-        style={{ padding: "10px", margin: "10px" }}
+        style={{ margin: "10px 0", padding: "10px" }}
       >
         Enviar formulario Minimalista
       </button>

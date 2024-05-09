@@ -1,3 +1,5 @@
+import VisuallyHidden from "../../utildades/VisualHidden";
+
 export default function FormularioMinimalista() {
   return (
     <form

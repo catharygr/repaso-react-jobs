@@ -10,6 +10,7 @@ import ArrayComponente from "./componentes/arraycomponente/ArrayComponente";
 import Resumen from "./componentes/repaso de todo/resumen/Resumen";
 import TextInput from "./componentes/repaso de todo/imperativeHandle/TextInput";
 import Button from "./componentes/button/Button";
+import FormularioMinimalista from "./componentes/minimalista/FormularioMinimalista";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -65,6 +66,7 @@ function App() {
               <Formulario />
               <Counter />
               <Publicaciones />
+              <FormularioMinimalista />
             </>
           ) : (
             <>

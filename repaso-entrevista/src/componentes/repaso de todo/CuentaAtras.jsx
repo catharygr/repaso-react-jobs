@@ -24,6 +24,10 @@ export default function CuentaAtras({ valorInicial = 60 }) {
   }, []);
 
   return (
-    
+    <div className="container">
+      <h1>Cuenta atrás</h1>
+      <p>El contador se decrementara cada segundo</p>
+      <p>{cuentaAtras}</p>
+    </div>
   );
 }

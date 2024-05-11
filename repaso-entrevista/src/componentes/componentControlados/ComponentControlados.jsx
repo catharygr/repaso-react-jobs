@@ -30,5 +30,18 @@ export default function ComponentControlados() {
     console.log(values);
   };
 
-  return <div></div>;
+  return (
+    <div>
+      <ControladoUno
+        sharedState={sharedState}
+        handleChange={handleChange}
+      />
+      <ControladoDos
+        nombreRef={nombreRef}
+        emailRef={emailRef}
+        passwordRef={passwordRef}
+        handleSubmit={handleSubmit}
+      />
+    </div>
+  );
 }

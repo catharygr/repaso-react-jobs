@@ -18,11 +18,3 @@
   border: 1px solid #007bff;
   border-radius: 5px;
 }
-
-.input-rojo {
-  display: flex;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid red;
-  border-radius: 5px;
-}

@@ -6,6 +6,16 @@
   border-radius: 5px;
 }
 
+.btn {
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
 .input-formulario .btn {
   width: 200px;
   height: 30px;

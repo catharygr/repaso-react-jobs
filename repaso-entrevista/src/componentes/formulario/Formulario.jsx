@@ -88,6 +88,14 @@ export default function Formulario() {
       </div>
       <div>
         <p className={theme}>{theme}</p>
+        <button
+          className="btn-theme"
+          onClick={() =>
+            setTheme(theme === "modo-claro" ? "modo-oscuro" : "modo-claro")
+          }
+        >
+          Cambiar tema
+        </button>
       </div>
       <div>
         <p>{miConstante.current}</p>

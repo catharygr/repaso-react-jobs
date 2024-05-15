@@ -15,7 +15,7 @@ export default function Counter() {
   };
 
   return (
-    <div className="container-counter">
+    <div className="container-counter-rosa">
       <p className="contador">Contador: {counter}</p>
       <button
         className="btn-counter"

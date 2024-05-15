@@ -4,7 +4,6 @@ import Clock from "../counter/clock/Clock";
 import useCustomHook from "../../utildades/useCustomHook";
 
 export default function Counter() {
-  // const [counter, setCounter] = useState(0);
   const { value, incrementValue, decrementValue } = useCustomHook();
   const [showClock, setShowClock] = useState(false);
 

@@ -7,7 +7,7 @@ export default function CuentaAtras({ valorInicial = 60 }) {
 
   useEffect(() => {
     referencia.current = cuentaAtras;
-  }, [cuentaAtras]);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {

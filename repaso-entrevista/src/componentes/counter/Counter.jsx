@@ -15,7 +15,7 @@ export default function Counter() {
   };
 
   return (
-    <>
+    <div className="container-counter">
       <p className="contador">Contador: {counter}</p>
       <button
         className="btn-counter"
@@ -36,6 +36,6 @@ export default function Counter() {
         {showClock ? "Ocultar reloj" : "Mostrar reloj"}
       </button>
       {showClock && <Clock />}
-    </>
+    </div>
   );
 }

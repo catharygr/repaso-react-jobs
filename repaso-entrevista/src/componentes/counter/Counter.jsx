@@ -24,6 +24,12 @@ export default function Counter() {
         Incrementar
       </button>
       <button
+        className="btn-counter"
+        onClick={() => setCounter(counter - 1)}
+      >
+        Decrementar
+      </button>
+      <button
         className="btn-reloj"
         onClick={toggleClock}
       >

@@ -9,8 +9,8 @@ export default function Counter() {
   const [showClock, setShowClock] = useState(false);
 
   useEffect(() => {
-    document.title = `Contador: ${counter}`;
-  }, [counter]);
+    document.title = `Contador: ${value}`;
+  }, [value]);
 
   const toggleClock = () => {
     setShowClock(!showClock);
@@ -18,16 +18,16 @@ export default function Counter() {
 
   return (
     <div className="container-counter-rosa">
-      <p className="contador">Contador: {counter}</p>
+      <p className="contador">Contador: {value}</p>
       <button
         className="btn-counter"
-        onClick={() => setCounter(counter + 1)}
+        onClick={() => incrementValue(value)}
       >
         Incrementar
       </button>
       <button
         className="btn-counter"
-        onClick={() => setCounter(counter - 1)}
+        onClick={() => decrementValue(value)}
       >
         Decrementar
       </button>

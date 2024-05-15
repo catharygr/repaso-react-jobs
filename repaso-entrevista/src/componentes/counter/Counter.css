@@ -28,7 +28,9 @@
 
 .container-counter-rosa {
   display: flex;
-
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: palevioletred;
   width: 100%;
 }

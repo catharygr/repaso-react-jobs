@@ -42,7 +42,7 @@ export default function Resumen() {
 // }
 
 function Counter() {
-  const [value, incrementValue, decrementValue] = useCustomHook();
+  const { value, incrementValue, decrementValue } = useCustomHook();
   // const [count, setCount] = React.useState(0);
 
   React.useEffect(() => {

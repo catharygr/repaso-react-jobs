@@ -2,6 +2,7 @@
 import React from "react";
 import "./Resumen.css";
 import CuentaAtras from "../CuentaAtras";
+import useCustomHook from "../../../utildades/useCustomHook";
 
 export default function Resumen() {
   return (

@@ -42,27 +42,28 @@ export default function Resumen() {
 // }
 
 function Counter() {
-  const [count, setCount] = React.useState(0);
+  const [value, incrementValue, decrementValue] = useCustomHook();
+  // const [count, setCount] = React.useState(0);
 
   React.useEffect(() => {
     // console.log("Se actualizó el contador");
     console.log("El componente se montó");
-  }, [count]);
+  }, [value]);
 
   return (
     <div className="container-counter">
-      <p>Contador: {count}</p>
+      <p>Contador: {value}</p>
       <p>Abre la consola y re-dimensiona la ventana</p>
       <div className="container-btn">
         <button
           className="btn"
-          onClick={() => setCount(count + 1)}
+          onClick={() => incrementValue(value)}
         >
           Incrementar
         </button>
         <button
           className="btn"
-          onClick={() => setCount(count - 1)}
+          onClick={() => decrementValue(value)}
         >
           Decrementar
         </button>

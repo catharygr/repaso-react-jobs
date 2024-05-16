@@ -75,7 +75,7 @@ function Counter() {
 function Card({ children }) {
   return (
     <>
-      <h3>{title}</h3>
+      {/* <h3>{title}</h3> */}
       <ul>{children}</ul>
     </>
   );

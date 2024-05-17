@@ -119,7 +119,12 @@ const MyForm = () => {
         onChange={(e) => setName(e.target.value)}
         type="text"
       />
-      <button type="submit">Enviar</button>
+      <button
+        className="btn-myform"
+        type="submit"
+      >
+        Enviar
+      </button>
     </form>
   );
 };

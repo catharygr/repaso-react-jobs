@@ -100,6 +100,26 @@ export default function Formulario() {
         <p>{miConstante.current}</p>
         <button onClick={handleMiConstante}>Cambiar mi constante</button>
       </div>
+      <MyForm />
     </>
   );
 }
+
+const MyForm = () => {
+  const [name, setName] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`El nombre es: ${name}`);
+  };
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        type="text"
+      />
+      <button type="submit">Enviar</button>
+    </form>
+  );
+};

@@ -106,17 +106,25 @@ export default function Formulario() {
 }
 
 const MyForm = () => {
-  const [name, setName] = useState("");
+  const [form, setForm] = useState({
+    name: "",
+    apellido: "",
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`El nombre es: ${name}`);
+    alert(`El nombre es: ${form.name} ${form.apellido}`);
   };
   return (
     <form onSubmit={handleSubmit}>
       <input
-        value={name}
-        onChange={(e) => setName(e.target.value)}
+        value={form.name}
+        onChange={(e) => setForm(e.target.value)}
+        type="text"
+      />
+      <input
+        value={form.apellido}
+        onChange={(e) => setForm(e.target.value)}
         type="text"
       />
       <button

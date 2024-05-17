@@ -113,18 +113,19 @@ const MyForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setForm({ name: "", apellido: "" });
     alert(`El nombre es: ${form.name} ${form.apellido}`);
   };
   return (
     <form onSubmit={handleSubmit}>
       <input
         value={form.name}
-        onChange={(e) => setForm(e.target.value)}
+        onChange={(e) => setForm({ ...form, name: e.target.value })}
         type="text"
       />
       <input
         value={form.apellido}
-        onChange={(e) => setForm(e.target.value)}
+        onChange={(e) => setForm({ ...form, apellido: e.target.value })}
         type="text"
       />
       <button

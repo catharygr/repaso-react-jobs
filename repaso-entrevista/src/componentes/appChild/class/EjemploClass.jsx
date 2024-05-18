@@ -9,6 +9,6 @@ export default class Ejemplo extends Component {
   }
 
   render() {
-    return <p style={{ color: "red" }}>{this.state.mensaje}</p>;
+    return <p style={{ color: "red", fontSize: "3" }}>{this.state.mensaje}</p>;
   }
 }

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Publicaciones.css";
-import MyComponent from "./LazyComponent";
+import { MyComponent } from "./LazyComponent";
 
 export function Posts() {
   const [posts, setPosts] = useState([]);

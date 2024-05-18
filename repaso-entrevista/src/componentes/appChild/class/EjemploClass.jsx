@@ -4,7 +4,7 @@ export default class Ejemplo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mensaje: "Hola componente",
+      mensaje: "Hola componente de clase",
     };
   }
 

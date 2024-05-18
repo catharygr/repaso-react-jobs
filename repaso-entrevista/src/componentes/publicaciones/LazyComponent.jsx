@@ -1,6 +1,6 @@
 import { Suspense, lazy } from "react";
 
-const LazyComponent = lazy(() => import("./AnotherComponent")); // Deberías importar otro componente
+const LazyComponent = lazy(() => import("./Publicaciones"));
 
 export default function MyComponent() {
   return (

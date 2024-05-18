@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Publicaciones.css";
-import { MyComponent } from "./LazyComponent";
+// import LazyComponent from "./LazyComponent";
 
 export function Posts() {
   const [posts, setPosts] = useState([]);
@@ -56,7 +56,7 @@ export function Posts() {
   return (
     <div className="filter-post">
       <h3>Publicaciones</h3>
-      <MyComponent />
+      {/* <LazyComponent /> */}
       <input
         className="input-post"
         type="text"

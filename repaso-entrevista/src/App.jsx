@@ -11,7 +11,7 @@ import Resumen from "./componentes/repaso de todo/resumen/Resumen";
 import TextInput from "./componentes/repaso de todo/imperativeHandle/TextInput";
 import Button from "./componentes/button/Button";
 import FormularioMinimalista from "./componentes/minimalista/FormularioMinimalista";
-import EjemploClass from "./class/EjemploClass";
+import EjemploClass from "./componentes/appChild/class/EjemploClass";
 
 function App() {
   const [count, setCount] = useState(0);

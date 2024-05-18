@@ -1,7 +1,14 @@
+import { Suspense, lazy } from "react";
+
+const LazyComponent = lazy(() => import("./AnotherComponent")); // Deberías importar otro componente
+
 export default function MyComponent() {
   return (
-    <div>
+    <>
       <h2>Lazy Component</h2>
-    </div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyComponent />
+      </Suspense>
+    </>
   );
 }

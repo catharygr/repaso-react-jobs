@@ -8,7 +8,7 @@ export default function Counter() {
   const [showClock, setShowClock] = useState(false);
 
   useEffect(() => {
-    document.title = `Contador: ${value}`;
+    document.title = "React Functional Components";
   }, [value]);
 
   const toggleClock = () => {
